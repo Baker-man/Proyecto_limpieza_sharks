@@ -1,6 +1,6 @@
 # Proyecto_limpieza_sharks
 
-🎯Objetivos
+🎯OBJETIVOS
 
 1) Crear un repo nuevo con files src, img, data, Readme.md y gitignore.
 
@@ -9,7 +9,9 @@
 3) Limpieza:
 
     a) Borrar columnas si y sólo si len(NaN) > 80%
+    
     b) Al menos 6000 filas
+    
     c) Mismo tipo de datos, duplicados, etc...
 
 4) Presentación
@@ -33,8 +35,5 @@ Ejemplo: ver ataques por países en un dataframe
         - 
 4) Mirar datos inconsistentes
     cambiar tipo de dato (optimizar memoria)
-5) Eliminar duplicados
-6) Columnas constantes o de baja varianza
-7) Outliers
-8) Colinealidad
-9) Checkear que no hay duplicados de nuevo
+5) Checkear y eliminar posibles nuevos duplicados
+6) Colinealidad
