@@ -7,9 +7,10 @@
 2) Issue con el link pegado de nuestro Repo
 
 3) Limpieza:
-    #a) Borrar columnas si y sólo si len(NaN) > 80%
-    #b) Al menos 6000 filas
-    #c) Mismo tipo de datos, duplicados, etc...
+
+    a) Borrar columnas si y sólo si len(NaN) > 80%
+    b) Al menos 6000 filas
+    c) Mismo tipo de datos, duplicados, etc...
 
 4) Presentación
 
