@@ -37,3 +37,7 @@ Ejemplo: ver ataques por países en un dataframe
     cambiar tipo de dato (optimizar memoria)
 5) Checkear y eliminar posibles nuevos duplicados
 6) Colinealidad
+
+
+POSIBLES MEJORAS A FUTURO
+
