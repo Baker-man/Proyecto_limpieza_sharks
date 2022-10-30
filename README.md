@@ -21,7 +21,7 @@ BONUS: Objetivo (insight)
 Ejemplo: ver ataques por países en un dataframe
 
 
-
+--------------------------------------------------------------------
 
 
 📋PASOS SEGUIDOS
@@ -36,8 +36,8 @@ Ejemplo: ver ataques por países en un dataframe
 4) Mirar datos inconsistentes
     cambiar tipo de dato (optimizar memoria)
 5) Checkear y eliminar posibles nuevos duplicados
-6) Colinealidad
 
+-------------------------------------------------------------------
 
 POSIBLES MEJORAS A FUTURO
 
