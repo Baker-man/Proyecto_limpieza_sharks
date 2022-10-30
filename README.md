@@ -1,17 +1,17 @@
 # Proyecto_limpieza_sharks
 
-#Objetivos
+🎯Objetivos
 
-#1) Crear un repo nuevo con files src, img, data, Readme.md y gitignore.
+1) Crear un repo nuevo con files src, img, data, Readme.md y gitignore.
 
-#2) Issue con el link pegado de nuestro Repo
+2) Issue con el link pegado de nuestro Repo
 
-#3) Limpieza:
+3) Limpieza:
     #a) Borrar columnas si y sólo si len(NaN) > 80%
     #b) Al menos 6000 filas
     #c) Mismo tipo de datos, duplicados, etc...
 
-#4) Presentación
+4) Presentación
 
 BONUS: Objetivo (insight)
 
@@ -21,7 +21,7 @@ Ejemplo: ver ataques por países en un dataframe
 
 
 
-#PASOS SEGUIDOS
+📋PASOS SEGUIDOS
 
 1) Cargar el dataframe
 2) Explorar el dataframe
