@@ -38,7 +38,7 @@ Ejemplo: ver ataques por países en un dataframe
    
 ![NaN values](https://user-images.githubusercontent.com/112175733/199070004-aa218512-0219-4ca7-8dde-d3001e166335.png)
 
-     - Para eliminar las filas fijamos un umbral de más de 15 nulos. Tras hacer esto, borramos la columna "num_nan" porque ya no nos sirve.
+Para eliminar las filas fijamos un umbral de más de 15 nulos. Tras hacer esto, borramos la columna "num_nan" porque ya no nos sirve.
         
 ![clean_nan](https://user-images.githubusercontent.com/112175733/199071030-8f5ce820-e5a4-48ea-86e2-1b7b5ce57041.png)
 
