@@ -132,6 +132,7 @@ Hemos pasado de tener 25723 filas a tan solo 6302.
 
 
 Nº de ataques por año
+----
 
 - He restringido a los ataques en los últimos 50 años, porque es el periodo en el que más registros había.
     
@@ -167,6 +168,67 @@ Nº de ataques recibidos por sexo
 ![Attacks_per_sex](https://user-images.githubusercontent.com/112175733/199081740-e8279103-7027-4dca-b44c-cca3b65000ce.png)
 
 
+Claramente hay más ataques a hombres que a mujeres. Podría estar relacionado con que las actividades con mayor riesgo frente a este tipo de ataques son realizadas principalmente por hombres.
+
+
+Fatalidad por especie de tiburón y países en los que más ataca cada especie
+----
+
+Agrupamos las especies por número de fatalidades en base a la columna 'fatal_count' y por la moda de 'Country' para cada especie.
+
+        not_unknown = sharks2['Species'] != 'unknown'
+        
+        sharks3 = sharks2[not_unknown]
+        
+        fatal = sharks3.groupby('Species').agg({'fatal_count': 'sum', 'Country': lambda x: x.mode().tolist()[:1]})
+
+
+
+                    fatal_count	Country
+        Species		
+        Angel shark	0.0	[SPAIN]
+        Basking shark	2.0	[SCOTLAND]
+        Blue shark	11.0	[AUSTRALIA]
+        Bronze whaler shark	6.0	[AUSTRALIA]
+        Bull shark	40.0	[USA]
+        Dogfish shark	0.0	[AUSTRALIA]
+        Dusky shark	0.0	[SOUTH AFRICA]
+        Galapagos shark	2.0	[ECUADOR]
+        Goblin shark	0.0	[JAPAN]
+        Grey reef shark	1.0	[AUSTRALIA]
+        Hammerhead shark	2.0	[USA]
+        Lemon shark	0.0	[USA]
+        Leopard shark	0.0	[AUSTRALIA]
+        Mako shark	2.0	[USA]
+        Nurse shark	0.0	[USA]
+        Porbeagle shark	0.0	[BRITISH ISLES]
+        Raggedtooth shark	0.0	[SOUTH AFRICA]
+        Salmon shark	0.0	[USA]
+        Sand shark	0.0	[USA]
+        Silvertip shark	0.0	[SUDAN]
+        Soupfin shark	0.0	[SOUTH AFRICA]
+        Spinner shark	0.0	[USA]
+        Thresher shark	0.0	[USA]
+        Tiger shark	68.0	[USA]
+        Whale shark	0.0	[MOZAMBIQUE]
+        White shark	150.0	[USA]
+        Wobbegong shark	0.0	[AUSTRALIA]
+        Zambezi shark	9.0	[SOUTH AFRICA]
+        unknown	0.0	[]
+        
+
+        plt.figure(figsize=(15, 9))
+
+
+        fatal[(fatal.fatal_count>0)].plot.barh();
+        plt.xlabel("Fatalities", labelpad=10, fontweight='semibold', fontstyle='italic')
+        plt.ylabel("Species", labelpad=10, fontweight='semibold', fontstyle='italic')
+        plt.title("Fatalities per species", fontweight='bold');
+        
+![Fatalities_per_species](https://user-images.githubusercontent.com/112175733/199082573-6cf0de41-0b6d-4b5a-9fd3-8c79c95da6db.png)
+
+
+El top 3 de tiburones con más fatalidades registradas son el Blanco, el Tigre y el Toro.
 
 -------------------------------------------------------------------
 
