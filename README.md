@@ -45,7 +45,8 @@ Ejemplo: ver ataques por países en un dataframe
         Hemos pasado de tener 25723 filas a tan solo 6302.
         
     b) Para el resto de NaN, exploramos valores y significado de columnas y valoramos por qué lo sustituimos (0, unknown...).
-        - En mi caso, he optado por rellenar todas las columnas restantes con valores nulos con el valor 'unknown'
+        
+       - En mi caso, he optado por rellenar todas las columnas restantes con valores nulos con el valor 'unknown'
         
         ![nan_fill](https://user-images.githubusercontent.com/112175733/199072470-fa404a5e-543a-4efe-94dc-ce7aae2bd881.png)
         
