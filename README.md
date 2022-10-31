@@ -88,9 +88,43 @@ Hemos pasado de tener 25723 filas a tan solo 6302.
        
     e) Para la columna countries, he limpiado con str.contains y a destacar, aquellos ataques acontecidos entre dos países o en mares y océanos los he calificado como acontecidos en aguas internacionales.
     
-    f)
-5) Cambiar tipo de dato (optimizar memoria)
-6) Checkear y eliminar posibles nuevos duplicados
+    f) Para la columna Age he definido la función clean_Age y se la he aplicado a la columna Age para que se vea reflejada en una nueva columna mean_age. En resumen, va a coger aquellas celdas con más de una edad y va a devolver la media de las edades que aparecen en la celda.
+    
+                    def clean_Age(x):
+                            x = x.lower()
+                            patron = re.findall('\d+', x)[:5]
+                            res = [eval(i) for i in patron]
+
+
+                            if patron:
+                                return np.mean(res)
+                            elif "2to3months" in x: # around 0.208
+                                return 0.2
+                            elif "9months" in x:
+                                return 0.75
+                            elif "18months" in x:
+                                return 1.5
+                            elif "teen" in x: #entre 13 y 19
+                                return 16
+                            elif "young" in x: #entre 15 y 24
+                                return 19.5
+                            elif "adult" in x: # entre 18 y 65
+                                return 41.5
+                            elif "middle" in x : # entre 40 y 60
+                                return 50
+                            elif "elderly" in x: # +65
+                                return 70
+                            else:
+                                return 'unknown'
+                
+                    sharks1['mean_age']=sharks1.Age.apply(clean_Age)
+
+    g) Para la columna Species, he ido limpiando con str.contains.
+    - Dentro me encontré que no podía asignar una especie a los valores de tiburones con tamaño o edad específicos, porque podrían ser distintas especies en distintas fases de crecimiento, por lo que decidí asignarle el valor 'unknown'.
+
+5) A continuación, he cambiado el tipo de datos de los campos de tipo int y float que tenemos para optimizar algo de memoria. También he convertido los campos de tipo object en category, puesto que ya no queremos añadirles ningún valor único más.
+
+6) Por último he comprobado que no hubiera posibles nuevos duplicados.
 
 -------------------------------------------------------------------
 
