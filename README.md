@@ -42,15 +42,15 @@ Para eliminar las filas fijamos un umbral de más de 15 nulos. Tras hacer esto, 
         
 ![clean_nan](https://user-images.githubusercontent.com/112175733/199071030-8f5ce820-e5a4-48ea-86e2-1b7b5ce57041.png)
 
-    Hemos pasado de tener 25723 filas a tan solo 6302.
+Hemos pasado de tener 25723 filas a tan solo 6302.
         
-    b) Para el resto de NaN, exploramos valores y significado de columnas y valoramos por qué lo sustituimos (0, unknown...).
+b) Para el resto de NaN, exploramos valores y significado de columnas y valoramos por qué lo sustituimos (0, unknown...).
         
-    - En mi caso, he optado por rellenar todas las columnas restantes con valores nulos con el valor 'unknown'
+- En mi caso, he optado por rellenar todas las columnas restantes con valores nulos con el valor 'unknown'
         
-        ![nan_fill](https://user-images.githubusercontent.com/112175733/199072470-fa404a5e-543a-4efe-94dc-ce7aae2bd881.png)
+ ![nan_fill](https://user-images.githubusercontent.com/112175733/199072470-fa404a5e-543a-4efe-94dc-ce7aae2bd881.png)
         
-        ![nan_cols0](https://user-images.githubusercontent.com/112175733/199072973-561226c2-4b68-4f43-9585-9bb1a2fc9c81.png)
+ ![nan_cols0](https://user-images.githubusercontent.com/112175733/199072973-561226c2-4b68-4f43-9585-9bb1a2fc9c81.png)
 
 4) ¿Qué columnas me interesa analizar más profundamente, ergo limpiar y preparar? 
  
