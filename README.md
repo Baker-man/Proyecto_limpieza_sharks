@@ -77,7 +77,18 @@ Hemos pasado de tener 25723 filas a tan solo 6302.
             
             sharks1['fatal_count']=sharks1.Fatal.apply(fatal_Count)
 
-        
+    d) Para la columna Year he rellenado los dos registros que estaban con valores nulos con el año que aparecía en las columnas Case_number y date.
+    
+            sharks1.loc[sharks1['Year'] == 'unknown']
+            
+            sharks1.at[187, 'Year'] = 2017
+            sharks1.at[6079, 'Year'] = 1836
+            
+            sharks1['Year'] = sharks1['Year'].astype('int')
+       
+    e) Para la columna countries, he limpiado con str.contains y a destacar, aquellos ataques acontecidos entre dos países o en mares y océanos los he calificado como acontecidos en aguas internacionales.
+    
+    f)
 5) Cambiar tipo de dato (optimizar memoria)
 6) Checkear y eliminar posibles nuevos duplicados
 
