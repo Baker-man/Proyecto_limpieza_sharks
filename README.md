@@ -32,8 +32,8 @@ Ejemplo: ver ataques por países en un dataframe
 
     a) Si len(NaN) > 80% borramos columnas
 
-        - Definimos función para ver valores nulos por columnas y vemos que no todas las columnas con len(NaN) > 80% nos interesan ser borradas, porque tenemos un gran número de registros/filas en el que todas o casi todas las columnas tienen valores nulos. 
-        - Creamos una columna 'num_nan' que cuente el número de nulos por fila. Nos damos cuenta de que vale más borrar esas filas con tantos nulos y a partir de ahí trabajar con las columnas que nos interesan. Sí que vamos a borrar las dos últimas columnas, pues no proporcionan conocimiento sobre qué se está midiendo con su nombre "unnamed" y para más inri, cerca del 100% de los registros son nulos para esas dos columnas.
+    - Definimos función para ver valores nulos por columnas y vemos que no todas las columnas con len(NaN) > 80% nos interesan ser borradas, porque tenemos un gran número de registros/filas en el que todas o casi todas las columnas tienen valores nulos. 
+    - Creamos una columna 'num_nan' que cuente el número de nulos por fila. Nos damos cuenta de que vale más borrar esas filas con tantos nulos y a partir de ahí trabajar con las columnas que nos interesan. Sí que vamos a borrar las dos últimas columnas, pues no proporcionan conocimiento sobre qué se está midiendo con su nombre "unnamed" y para más inri, cerca del 100% de los registros son nulos para esas dos columnas.
    
    
 ![NaN values](https://user-images.githubusercontent.com/112175733/199070004-aa218512-0219-4ca7-8dde-d3001e166335.png)
