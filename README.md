@@ -59,6 +59,7 @@ Hemos pasado de tener 25723 filas a tan solo 6302.
     En mi caso, voy a elegir las columnas 'Year', 'Country', 'Sex', 'Age', 'Fatal' y 'Species' para posteriormente explorar insights en torno a ellas.
     
     a) En primer lugar, he limpiado la columna de Sex. Para ello he sustituido las 'M ' con M, las 'N' con 'M', y 'lli' y '.' con unknown.
+    
     b) En segundo lugar he limpiado la columna de Fatal.
     
                - sharks1.Fatal.replace(['UNKNOWN', ' N', 'M', '2017', 'N ', 'y'], 
