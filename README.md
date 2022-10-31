@@ -51,6 +51,8 @@ Hemos pasado de tener 25723 filas a tan solo 6302.
  ![nan_fill](https://user-images.githubusercontent.com/112175733/199072470-fa404a5e-543a-4efe-94dc-ce7aae2bd881.png)
         
  ![nan_cols0](https://user-images.githubusercontent.com/112175733/199072973-561226c2-4b68-4f43-9585-9bb1a2fc9c81.png)
+ 
+ 
 
 4) ¿Qué columnas me interesa analizar más profundamente, ergo limpiar y preparar? 
  
@@ -62,10 +64,23 @@ Hemos pasado de tener 25723 filas a tan solo 6302.
                - sharks1.Fatal.replace(['UNKNOWN', ' N', 'M', '2017', 'N ', 'y'], 
                                        ['unknown', 'N', 'N', 'unknown', 'N', 'Y'],
                                        inplace=True)
-        
+    
+    c) Después he creado una nueva función y una nueva columna 'fatal_count'. Si ha habido fatalidades, añade 1 a la nueva casilla. Si no, añade un 0.
+ 
+            def fatal_Count(x):
+    
+                if x == 'Y':
+                    return 1
+                else:
+                    return 0
+            
+            sharks1['fatal_count']=sharks1.Fatal.apply(fatal_Count)
+
         
 5) Cambiar tipo de dato (optimizar memoria)
 6) Checkear y eliminar posibles nuevos duplicados
+
+-------------------------------------------------------------------
 
 💹INSIGHTS
 
