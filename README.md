@@ -29,15 +29,18 @@ Ejemplo: ver ataques por países en un dataframe
 1) Cargar el dataframe
 2) Explorar el dataframe
 3) Mirar valores nulos
+
     a) Si len(NaN) > 80% borramos columnas
-        - Vemos que no todas las columnas con len(NaN) > 80% nos interesan ser borradas, porque tenemos un gran número de registros en el que todas o casi todas las columnas tienen valores nulos. Nos vale más borrar esas filas y a partir de ahí trabajar con las columnas que nos interesan. Sí que vamos a borrar las dos últimas columnas, pues no indican su significado con su nombre "unnamed" y cerca del 100% de los registros son nulos para esas dos columnas.
+
+        - Definimos función para ver valores nulos y vemos que no todas las columnas con len(NaN) > 80% nos interesan ser borradas, porque tenemos un gran número de registros/filas en el que todas o casi todas las columnas tienen valores nulos. Nos vale más borrar esas filas y a partir de ahí trabajar con las columnas que nos interesan. Sí que vamos a borrar las dos últimas columnas, pues no indican su significado con su nombre "unnamed" y cerca del 100% de los registros son nulos para esas dos columnas.
     b) El resto de NaN exploramos valores y significado de columnas y valoramos por qué lo sustituimos (0, unknown...)
         - 
-4) Mirar datos inconsistentes
-    cambiar tipo de dato (optimizar memoria)
+4) Cambiar tipo de dato (optimizar memoria)
 5) Checkear y eliminar posibles nuevos duplicados
 
 -------------------------------------------------------------------
 
 POSIBLES MEJORAS A FUTURO
 
+1) Limpiar el dataframe al completo
+2) Estudiar en profundidad el sujeto del análisis, los tiburones, para obtener más insights interesantes.
