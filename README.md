@@ -130,6 +130,44 @@ Hemos pasado de tener 25723 filas a tan solo 6302.
 
 💹INSIGHTS
 
+
+Nº de ataques por año
+
+- He restringido a los ataques en los últimos 50 años, porque es el periodo en el que más registros había.
+    
+        plt.figure(figsize=(10, 6))
+        data = sharks2[sharks2.Year > 1970].Year
+
+        data.hist(bins=500, width=0.8)
+        plt.xlabel("Year", labelpad=10, fontweight='semibold', fontstyle='italic')
+        plt.ylabel("Attacks", labelpad=10, fontweight='semibold', fontstyle='italic')
+        plt.title("Attacks per year", fontweight='bold');
+        
+
+![Attacks_per_year](https://user-images.githubusercontent.com/112175733/199081214-a8c7ca2e-da8e-47d1-b36f-d39d9aba60b8.png)
+
+Se aprecia un crecimiento en las últimas dos décadas, quizás las actividades acuáticas de los humanos con mayor peligrosidad frente a tiburones han crecido en este periodo.
+
+
+Nº de ataques recibidos por sexo
+----
+
+        n_unk = sharks2['Sex'] != 'unknown'
+        
+        sharks4 = sharks2[n_unk]
+        
+        plt.figure(figsize=(9, 5))
+
+        sharks4.Sex.value_counts().plot.barh();
+        plt.xlabel("Attacks", labelpad=10, fontweight='semibold', fontstyle='italic')
+        plt.ylabel("Sex", labelpad=10, fontweight='semibold', fontstyle='italic')
+        plt.title("Attacks per sex", fontweight='bold');
+        
+
+![Attacks_per_sex](https://user-images.githubusercontent.com/112175733/199081740-e8279103-7027-4dca-b44c-cca3b65000ce.png)
+
+
+
 -------------------------------------------------------------------
 
 POSIBLES MEJORAS A FUTURO
