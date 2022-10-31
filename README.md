@@ -42,7 +42,7 @@ Para eliminar las filas fijamos un umbral de más de 15 nulos. Tras hacer esto, 
         
 ![clean_nan](https://user-images.githubusercontent.com/112175733/199071030-8f5ce820-e5a4-48ea-86e2-1b7b5ce57041.png)
 
-     Hemos pasado de tener 25723 filas a tan solo 6302.
+    Hemos pasado de tener 25723 filas a tan solo 6302.
         
     b) Para el resto de NaN, exploramos valores y significado de columnas y valoramos por qué lo sustituimos (0, unknown...).
         
